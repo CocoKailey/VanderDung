@@ -4,6 +4,7 @@
 	antag_datum = /datum/antagonist/purishep
 	outfit = /datum/outfit/job/specialinquisitor
 	allowed_races = list(SPEC_ID_HUMEN)
+	is_recognized = TRUE
 
 /datum/outfit/job/specialinquisitor/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	. = ..()
@@ -15,7 +16,7 @@
 	pants = /obj/item/clothing/pants/trou/leather
 	backr = /obj/item/storage/backpack/satchel
 	head = /obj/item/clothing/head/leather/inqhat
-	gloves = /obj/item/clothing/gloves/otavan/inqgloves
+	gloves = /obj/item/clothing/gloves/leather/otavan/inqgloves
 	beltr = /obj/item/storage/belt/pouch/coins/rich
 	beltl = /obj/item/weapon/sword/rapier
 	mask = /obj/item/clothing/face/spectacles/inqglasses
@@ -63,6 +64,7 @@
 	greet_text = "Crusader of the true faith, you came from Grenzelhoft under the command of the Inquisitor. Obey them as they lead you to smite the heathens."
 	outfit = /datum/outfit/job/adventurer/crusader
 	allowed_races = RACES_PLAYER_GRENZ
+	is_recognized = TRUE
 
 /datum/migrant_wave/crusade
 	name = "The Holy Crusade"

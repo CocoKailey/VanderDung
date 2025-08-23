@@ -4,7 +4,6 @@
 	tutorial = "Silent and yet full of life, the forests of Dendor grant you both happiness and misery. \
 	In tales you've heard of small woodland creechers frolicking, now there is only the beastspawn of Graggar and Dendor... \
 	And yet you seek beasts small enough to skin, scalp, and sell. Take heed, lest you become a beast yourself."
-	flag = HUNTER
 	department_flag = PEASANTS
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	display_order = JDO_HUNTER
@@ -26,12 +25,12 @@
 
 /datum/outfit/job/hunter/pre_equip(mob/living/carbon/human/H)
 	..()
-	pants = /obj/item/clothing/pants/tights/random
-	shirt = /obj/item/clothing/shirt/shortshirt/random
+	pants = /obj/item/clothing/pants/tights/colored/random
+	shirt = /obj/item/clothing/shirt/shortshirt/colored/random
 	shoes = /obj/item/clothing/shoes/boots/leather
 	neck = /obj/item/storage/belt/pouch/coins/poor
 	head = /obj/item/clothing/head/brimmed
-	cloak = /obj/item/clothing/cloak/raincloak/furcloak/brown
+	cloak = /obj/item/clothing/cloak/raincloak/furcloak/colored/brown
 	backr = /obj/item/storage/backpack/satchel
 	backl = /obj/item/gun/ballistic/revolver/grenadelauncher/bow
 	belt = /obj/item/storage/belt/leather

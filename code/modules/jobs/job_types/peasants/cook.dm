@@ -3,7 +3,6 @@
 	tutorial = "Slice, chop, and into the pot... \
 	you work closely with the innkeep to prepare meals for all the hungry mouths of Vanderlin. \
 	You've spent more nites than you can count cutting meat and vegetables until your fingers are bloody and raw, but it's honest work."
-	flag = COOK
 	department_flag = PEASANTS
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	faction = FACTION_TOWN
@@ -48,8 +47,8 @@
 	beltl = /obj/item/key/tavern
 	beltr = /obj/item/weapon/knife/villager
 	if(H.gender == MALE)
-		pants = /obj/item/clothing/pants/tights/random
-		shirt = /obj/item/clothing/shirt/shortshirt/random
+		pants = /obj/item/clothing/pants/tights/colored/random
+		shirt = /obj/item/clothing/shirt/shortshirt/colored/random
 		shoes = /obj/item/clothing/shoes/simpleshoes
 		cloak = /obj/item/clothing/cloak/apron/cook
 		head = /obj/item/clothing/head/cookhat
@@ -58,7 +57,7 @@
 	else
 		shirt = /obj/item/clothing/shirt/undershirt/lowcut
 		armor = /obj/item/clothing/armor/corset
-		pants = /obj/item/clothing/pants/skirt/red
+		pants = /obj/item/clothing/pants/skirt/colored/red
 		cloak = /obj/item/clothing/cloak/apron/cook
 		head = /obj/item/clothing/head/cookhat
 		shoes = /obj/item/clothing/shoes/simpleshoes

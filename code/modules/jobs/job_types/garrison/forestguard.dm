@@ -8,7 +8,6 @@
 	A fellow soldier had been given the title of Forest Warden for his valorant efforts \
 	and he's plucked you from one dangerous position into another. \
 	Atleast with the battle-brothers by your side, you will never die alone."
-	flag = FORGUARD
 	department_flag = GARRISON
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	display_order = JDO_FORGUARD
@@ -38,7 +37,7 @@
 		cloak = /obj/item/clothing/cloak/forrestercloak
 	armor = /obj/item/clothing/armor/leather/advanced/forrester
 	head = /obj/item/clothing/head/helmet/medium/decorated/skullmet
-	shirt = /obj/item/clothing/shirt/undershirt/black
+	shirt = /obj/item/clothing/shirt/undershirt/colored/black
 	pants = /obj/item/clothing/pants/trou/leather
 	shoes = /obj/item/clothing/shoes/boots
 	wrists = /obj/item/clothing/wrists/bracers/leather

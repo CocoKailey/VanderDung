@@ -11,6 +11,7 @@
 	min_pq = 2
 	category_tags = list(CTAG_ADVENTURER)
 	cmode_music = 'sound/music/cmode/adventurer/CombatOutlander3.ogg'
+	is_recognized = TRUE
 
 /datum/outfit/job/adventurer/lancer/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -36,12 +37,12 @@
 			backr = /obj/item/weapon/polearm/spear/billhook
 
 
-	pants = /obj/item/clothing/pants/tights/black
+	pants = /obj/item/clothing/pants/tights/colored/black
 	beltl = /obj/item/storage/belt/pouch/coins/mid
 	shoes = /obj/item/clothing/shoes/boots/rare/zybanplate
 	gloves = /obj/item/clothing/gloves/rare/zybanplate
 	belt = /obj/item/storage/belt/leather
-	shirt = /obj/item/clothing/shirt/undershirt/random
+	shirt = /obj/item/clothing/shirt/undershirt/colored/random
 	armor = /obj/item/clothing/armor/rare/zybanplate
 	backl = /obj/item/storage/backpack/satchel
 	head = /obj/item/clothing/head/rare/zybanplate

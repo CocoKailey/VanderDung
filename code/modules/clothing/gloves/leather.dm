@@ -16,6 +16,7 @@
 
 /obj/item/clothing/gloves/leather/black
 	color = CLOTHING_SOOT_BLACK
+	misc_flags = CRAFTING_TEST_EXCLUDE
 
 /obj/item/clothing/gloves/leather/advanced
 	name = "hardened leather gloves"
@@ -50,8 +51,7 @@
 	desc = "Thick leather gloves for pulling thorny plants... or cracking skulls."
 	icon_state = "apothgloves"
 
-
-/obj/item/clothing/gloves/otavan
+/obj/item/clothing/gloves/leather/otavan
 	name = "otavan leather gloves"
 	desc = "A pair of heavy Otavan leather gloves, commonly used by fencers, renowned for their quality."
 	icon_state = "fencergloves"
@@ -67,7 +67,7 @@
 	anvilrepair = null
 	sewrepair = TRUE
 
-/obj/item/clothing/gloves/otavan/inqgloves
+/obj/item/clothing/gloves/leather/otavan/inqgloves
 	name = "inquisitorial leather gloves"
 	desc = "Gloves of worn leather. Alas, the psydonian fetish wrapped around one is but a powerless replica."
 	icon_state = "inqgloves"

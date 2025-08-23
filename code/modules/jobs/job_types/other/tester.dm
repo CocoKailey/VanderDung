@@ -1,7 +1,6 @@
 /datum/job/tester
 	title = "Tester"
 	tutorial = "Try not to get obliterated by the Gods while they toy with you."
-	flag = GRAVETENDER
 	department_flag = PEASANTS
 	job_flags = (JOB_EQUIP_RANK)
 	faction = FACTION_TOWN
@@ -28,11 +27,11 @@
 	beltr = /obj/item/weapon/sword/sabre
 	if(prob(50))
 		beltr = /obj/item/weapon/sword/arming
-	shirt = /obj/item/clothing/shirt/shortshirt/merc
+	shirt = /obj/item/clothing/shirt/shortshirt/colored/merc
 	pants = /obj/item/clothing/pants/trou/leather
 	neck = /obj/item/clothing/neck/gorget
 	if(H.gender == FEMALE)
-		pants = /obj/item/clothing/pants/tights/black
+		pants = /obj/item/clothing/pants/tights/colored/black
 		beltr = /obj/item/weapon/sword/sabre
 	H.adjust_skillrank(/datum/skill/misc/swimming, rand(1,5), TRUE)
 	H.adjust_skillrank(/datum/skill/misc/climbing, rand(1,5), TRUE)

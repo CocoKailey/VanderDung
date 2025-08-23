@@ -14,6 +14,7 @@
 	category_tags = list(CTAG_PILGRIM, CTAG_TOWNER)
 	apprentice_name = "Chef Apprentice"
 	cmode_music = 'sound/music/cmode/towner/CombatTowner2.ogg'
+	is_recognized = TRUE
 
 /datum/outfit/job/adventurer/masterchef/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -28,8 +29,8 @@
 	H.adjust_skillrank(/datum/skill/labor/taming, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/cooking, 6, TRUE)
 	belt = /obj/item/storage/belt/leather
-	pants = /obj/item/clothing/pants/tights/random
-	shirt = /obj/item/clothing/shirt/shortshirt/random
+	pants = /obj/item/clothing/pants/tights/colored/random
+	shirt = /obj/item/clothing/shirt/shortshirt/colored/random
 	cloak = /obj/item/clothing/cloak/apron
 	head = /obj/item/clothing/head/cookhat/chef
 	shoes = /obj/item/clothing/shoes/shortboots

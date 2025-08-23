@@ -3,7 +3,6 @@
 	tutorial = "A stevedore is the lowest yet essential position in the Merchant's employment, reserved for the strong and loyal. \
 	You are responsible for hauling materials and goods to-and-fro the docks and warehouses, protecting their transportation from conniving thieves. \
 	Keep your eye out for the security of the Merchant, and they will surely treat you like family."
-	flag = GRABBER
 	department_flag = COMPANY
 	display_order = JDO_GRABBER
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
@@ -54,7 +53,7 @@
 	backpack_contents = list(/obj/item/storage/keyring/stevedore)
 	if(H.gender == MALE)
 		shoes = /obj/item/clothing/shoes/boots/leather
-		head = /obj/item/clothing/head/headband/red
+		head = /obj/item/clothing/head/headband/colored/red
 		H.change_stat(STATKEY_CON, 1)
 		H.change_stat(STATKEY_STR, 1)//thug bodytype
 	else

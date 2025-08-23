@@ -1,6 +1,8 @@
 #define ALL_TEMPLE_PATRONS 		list(/datum/patron/divine/astrata, /datum/patron/divine/noc, /datum/patron/divine/dendor, /datum/patron/divine/abyssor, /datum/patron/divine/necra, /datum/patron/divine/ravox, /datum/patron/divine/xylix, /datum/patron/divine/pestra, /datum/patron/divine/malum, /datum/patron/divine/eora)
-#define ALL_CLERIC_PATRONS 		list(/datum/patron/divine/astrata, /datum/patron/divine/noc, /datum/patron/divine/dendor, /datum/patron/divine/abyssor, /datum/patron/divine/necra, /datum/patron/divine/ravox, /datum/patron/divine/xylix, /datum/patron/divine/pestra, /datum/patron/divine/malum, /datum/patron/divine/eora, /datum/patron/inhumen/graggar, /datum/patron/inhumen/zizo, /datum/patron/inhumen/matthios, /datum/patron/inhumen/baotha)
+#define ALL_CLERIC_PATRONS 		list(/datum/patron/divine/astrata, /datum/patron/divine/noc, /datum/patron/divine/dendor, /datum/patron/divine/abyssor, /datum/patron/divine/necra, /datum/patron/divine/ravox, /datum/patron/divine/xylix, /datum/patron/divine/pestra, /datum/patron/divine/malum, /datum/patron/divine/eora)
+#define ALL_PALADIN_PATRONS 	list(/datum/patron/psydon, /datum/patron/divine/astrata, /datum/patron/divine/noc, /datum/patron/divine/dendor, /datum/patron/divine/abyssor, /datum/patron/divine/necra, /datum/patron/divine/ravox, /datum/patron/divine/xylix, /datum/patron/divine/pestra, /datum/patron/divine/malum, /datum/patron/divine/eora)
 #define ALL_TEMPLAR_PATRONS 	list(/datum/patron/divine/astrata, /datum/patron/divine/noc, /datum/patron/divine/eora, /datum/patron/divine/necra, /datum/patron/divine/ravox, /datum/patron/divine/pestra, /datum/patron/divine/dendor, /datum/patron/divine/abyssor, /datum/patron/divine/malum, /datum/patron/divine/xylix)
+#define ALL_PROFANE_PATRONS 	list(/datum/patron/inhumen/graggar, /datum/patron/inhumen/zizo, /datum/patron/inhumen/matthios, /datum/patron/inhumen/baotha)
 
 GLOBAL_LIST_INIT(curse_names, list())
 
@@ -69,6 +71,10 @@ GLOBAL_LIST_INIT(wolf_suffixes, list("Fang", "Claw", "Stalker", "Prowler", "Roar
 #define FAMILY_NEWLYWED "Newlywed"
 #define FAMILY_FULL "Parent"
 
+#define ANY_GENDER "Any gender"
+#define SAME_GENDER "Same gender"
+#define DIFFERENT_GENDER "Different gender"
+
 #define FAMILY_FATHER "Father"
 #define FAMILY_MOTHER "Mother"
 #define FAMILY_PROGENY "Progeny"
@@ -78,14 +84,13 @@ GLOBAL_LIST_INIT(wolf_suffixes, list("Fang", "Claw", "Stalker", "Prowler", "Roar
 
 GLOBAL_LIST_EMPTY(job_respawn_delays)
 
-//stress levels
-#define STRESS_MAX 30
+//stress levels. Stress starts at 0.
 #define STRESS_INSANE 7
 #define STRESS_VBAD 5
 #define STRESS_BAD 3
 #define STRESS_NEUTRAL 2
 #define STRESS_GOOD 1
-#define STRESS_VGOOD -1
+#define STRESS_VGOOD -4
 
 /*	........   Nutrition defines   ................ */
 #define MEAL_FILLING 30
@@ -156,6 +161,9 @@ GLOBAL_LIST_EMPTY(job_respawn_delays)
 
 #define TRIUMPH_BUY_RACE_ALL "race_all"
 #define TRIUMPH_BUY_ANY_CLASS "pick_any"
+#define TRIUMPH_BUY_ADOPTION "adoption"
+#define TRIUMPH_BUY_FART "fart"
+#define TRIUMPH_BUY_LEPROSY "leprosy"
 
 // Storyteller category and its buys
 #define TRIUMPH_CAT_STORYTELLER "STORYTELLER"
@@ -174,6 +182,18 @@ GLOBAL_LIST_EMPTY(job_respawn_delays)
 #define TRIUMPH_BUY_BAOTHA_INFLUENCE "baotha_influence"
 #define TRIUMPH_BUY_GRAGGAR_INFLUENCE "graggar_influence"
 #define TRIUMPH_BUY_MATTHIOS_INFLUENCE "matthios_influence"
+
+// Misc category and its buys
+#define TRIUMPH_CAT_MISC "MISC"
+
+#define TRIUMPH_BUY_PSYDON_FAVOURITE "psydon_favourite"
+
+// Misc category and its buys
+#define TRIUMPH_CAT_COMMUNAL "COMMUNAL"
+
+#define TRIUMPH_BUY_PSYDON_RETIREMENT "psydon_retirement"
+#define TRIUMPH_BUY_ORPHANAGE_RENOVATION "orphanage_renovation"
+#define TRIUMPH_BUY_LONGER_WEEK "longer_week"
 
 // Bought triumph buys category
 #define TRIUMPH_CAT_ACTIVE_DATUMS "BOUGHT"

@@ -62,6 +62,9 @@
 	///overlays managed by update_overlays() to prevent removing overlays that weren't added by the same proc
 	var/list/managed_overlays
 
+	///Used for changing icon states for different base sprites.
+	var/base_icon_state
+
 	///Cooldown tick timer for buckle messages
 	var/buckle_message_cooldown = 0
 	///Last fingerprints to touch this atom
@@ -270,6 +273,9 @@
 
 /atom/proc/handle_ricochet(obj/projectile/P)
 	return
+
+/atom/proc/get_explosion_resistance()
+	return 0
 
 ///Can the mover object pass this atom, while heading for the target turf
 /atom/proc/CanPass(atom/movable/mover, turf/target)
@@ -1390,3 +1396,8 @@
 			if(!start.CanAtmosPass(adj))
 				continue
 			_propagate_turf_heat(source, adj, key, next_value, next_weight, falloff, max_depth, depth + 1, seen)
+
+/// Returns the indice in filters of the given filter name.
+/// If it is not found, returns null.
+/atom/proc/get_filter_index(name)
+	return filter_data?.Find(name)

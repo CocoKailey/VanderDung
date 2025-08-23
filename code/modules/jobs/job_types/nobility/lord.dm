@@ -9,7 +9,6 @@ GLOBAL_LIST_EMPTY(lord_titles)
 	you sit at the center of every plot, and every whisper of ambition. Every man, woman, and child may envy your power and \
 	would replace you in the blink of an eye. But remember, its not envy that keeps you in place, it is your will. Show them \
 	the error of their ways."
-	flag = LORD
 	department_flag = NOBLEMEN
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	display_order = JDO_LORD
@@ -40,7 +39,7 @@ GLOBAL_LIST_EMPTY(lord_titles)
 	..()
 	SSticker.rulermob = spawned
 	var/mob/living/carbon/human/H = spawned
-	addtimer(CALLBACK(H, TYPE_PROC_REF(/mob, lord_color_choice)), 5 SECONDS)
+	addtimer(CALLBACK(H, TYPE_PROC_REF(/mob/living/carbon/human, lord_color_choice)), 7 SECONDS)
 	if(spawned.gender == MALE)
 		SSfamilytree.AddRoyal(H, FAMILY_FATHER)
 		ruler_title = "[SSmapping.config.monarch_title]"
@@ -61,7 +60,8 @@ GLOBAL_LIST_EMPTY(lord_titles)
 	backr = /obj/item/storage/backpack/satchel
 	belt = /obj/item/storage/belt/leather/plaquegold
 	beltl = /obj/item/weapon/knife/dagger/steel/special
-	scabbards = list(/obj/item/weapon/scabbard/knife)
+	beltr = /obj/item/weapon/sword/rapier
+	scabbards = list(/obj/item/weapon/scabbard/knife/royal, /obj/item/weapon/scabbard/sword/royal)
 	ring = /obj/item/clothing/ring/active/nomag
 	l_hand = /obj/item/weapon/lordscepter
 
@@ -87,8 +87,8 @@ GLOBAL_LIST_EMPTY(lord_titles)
 	H.change_stat(STATKEY_PER, 2)
 	H.change_stat(STATKEY_LCK, 5)
 	if(H.gender == MALE)
-		pants = /obj/item/clothing/pants/tights/black
-		shirt = /obj/item/clothing/shirt/undershirt/black
+		pants = /obj/item/clothing/pants/tights/colored/black
+		shirt = /obj/item/clothing/shirt/undershirt/colored/black
 		armor = /obj/item/clothing/armor/gambeson/arming
 		shoes = /obj/item/clothing/shoes/boots
 		cloak = /obj/item/clothing/cloak/lordcloak
@@ -96,7 +96,7 @@ GLOBAL_LIST_EMPTY(lord_titles)
 			if(H.dna.species.id == SPEC_ID_HUMEN)
 				H.dna.species.soundpack_m = new /datum/voicepack/male/evil()
 	else
-		pants = /obj/item/clothing/pants/tights/random
+		pants = /obj/item/clothing/pants/tights/colored/random
 		armor = /obj/item/clothing/shirt/dress/royal
 		shoes = /obj/item/clothing/shoes/shortboots
 		cloak = /obj/item/clothing/cloak/lordcloak/ladycloak
@@ -118,7 +118,6 @@ GLOBAL_LIST_EMPTY(lord_titles)
 
 /datum/job/exlord //just used to change the lords title
 	title = "Ex-Monarch"
-	flag = LORD
 	department_flag = NOBLEMEN
 	faction = FACTION_TOWN
 	total_positions = 0

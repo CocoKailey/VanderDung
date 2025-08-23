@@ -2,7 +2,6 @@
 	title = "Carpenter"
 	tutorial = "Others may regard your work as crude and demeaning, but you understand deep in your soul the beauty of woodchopping. \
 	For it is by your axe that the great trees of forests are felled, and it is by your hands from which the shining beacon of civilization is built."
-	flag = LUMBERJACK
 	department_flag = PEASANTS
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	display_order = JDO_CARPENTER
@@ -44,7 +43,7 @@
 	neck = /obj/item/clothing/neck/coif
 	armor = /obj/item/clothing/armor/gambeson/light/striped
 	pants = /obj/item/clothing/pants/trou
-	shirt = /obj/item/clothing/shirt/undershirt/random
+	shirt = /obj/item/clothing/shirt/undershirt/colored/random
 	wrists = /obj/item/clothing/wrists/bracers/leather
 	shoes = /obj/item/clothing/shoes/boots/leather
 	belt = /obj/item/storage/belt/leather

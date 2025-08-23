@@ -3,7 +3,6 @@
 	tutorial = "A well-traveled and well-learned seeker of wisdom, the Archivist bears the mark of Noc's influence.\
 	Tasked with recording the court's events and educating the ungrateful whelps the monarch calls heirs.\
 	Your work may go unappreciated now, but one dae historians will sing of your dedication and insight."
-	flag = ARCHIVIST
 	department_flag = NOBLEMEN
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	display_order = 19 //lol?
@@ -31,15 +30,15 @@
 	if(H.dna.species.id == SPEC_ID_DWARF)
 		shirt = /obj/item/clothing/shirt/undershirt/puritan
 		armor = /obj/item/clothing/armor/leather/jacket/apothecary
-		pants = /obj/item/clothing/pants/tights/black
+		pants = /obj/item/clothing/pants/tights/colored/black
 	else
 		if(H.gender == FEMALE)
 			armor = /obj/item/clothing/shirt/robe/archivist
-			pants = /obj/item/clothing/pants/tights/black
+			pants = /obj/item/clothing/pants/tights/colored/black
 		else
 			shirt = /obj/item/clothing/shirt/undershirt/puritan
 			armor = /obj/item/clothing/shirt/robe/archivist
-			pants = /obj/item/clothing/pants/tights/black
+			pants = /obj/item/clothing/pants/tights/colored/black
 	H.virginity = TRUE
 	shoes = /obj/item/clothing/shoes/boots
 	belt = /obj/item/storage/belt/leather/plaquesilver

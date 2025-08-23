@@ -5,6 +5,7 @@
 	allowed_sexes = list(MALE)
 	allowed_races = RACES_PLAYER_NONDISCRIMINATED
 	grant_lit_torch = TRUE
+	is_recognized = TRUE
 
 /datum/outfit/job/heartfelt/lord/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -13,7 +14,7 @@
 	neck = /obj/item/clothing/neck/gorget
 	head = /obj/item/clothing/head/helmet
 	shoes = /obj/item/clothing/shoes/nobleboot
-	pants = /obj/item/clothing/pants/tights/black
+	pants = /obj/item/clothing/pants/tights/colored/black
 	cloak = /obj/item/clothing/cloak/heartfelt
 	armor = /obj/item/clothing/armor/medium/surcoat/heartfelt
 	beltr = /obj/item/storage/belt/pouch/coins/rich
@@ -56,6 +57,7 @@
 	allowed_sexes = list(FEMALE)
 	allowed_races = RACES_PLAYER_NONDISCRIMINATED
 	grant_lit_torch = TRUE
+	is_recognized = TRUE
 
 /datum/outfit/job/heartfelt/lady/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -77,7 +79,7 @@
 	neck =  /obj/item/storage/belt/pouch/coins/rich
 	ring = /obj/item/clothing/ring/silver
 	shoes = /obj/item/clothing/shoes/shortboots
-	pants = /obj/item/clothing/pants/tights/random
+	pants = /obj/item/clothing/pants/tights/colored/random
 	if(H.mind)
 		H.adjust_skillrank(/datum/skill/craft/engineering, 1, TRUE)
 		H.adjust_skillrank(/datum/skill/misc/stealing, 4, TRUE)
@@ -106,13 +108,14 @@
 	outfit = /datum/outfit/job/heartfelt/hand
 	allowed_races = RACES_PLAYER_NONDISCRIMINATED
 	grant_lit_torch = TRUE
+	is_recognized = TRUE
 
 /datum/outfit/job/heartfelt/hand/pre_equip(mob/living/carbon/human/H)
 	..()
 	shirt = /obj/item/clothing/shirt/undershirt
 	belt = /obj/item/storage/belt/leather/black
 	shoes = /obj/item/clothing/shoes/nobleboot
-	pants = /obj/item/clothing/pants/tights/black
+	pants = /obj/item/clothing/pants/tights/colored/black
 	neck = /obj/item/clothing/neck/gorget
 	armor = /obj/item/clothing/armor/medium/surcoat/heartfelt
 	beltr = /obj/item/storage/belt/pouch/coins/rich
@@ -148,6 +151,7 @@
 	outfit = /datum/outfit/job/heartfelt/knight
 	allowed_races = RACES_PLAYER_NONDISCRIMINATED
 	grant_lit_torch = TRUE
+	is_recognized = TRUE
 
 /datum/outfit/job/heartfelt/knight/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -226,6 +230,7 @@
 	outfit = /datum/outfit/job/heartfelt/magos
 	allowed_races = RACES_PLAYER_NONDISCRIMINATED
 	grant_lit_torch = TRUE
+	is_recognized = TRUE
 
 /datum/outfit/job/heartfelt/magos
 	allowed_patrons = list(/datum/patron/divine/noc)
@@ -241,8 +246,8 @@
 	H.mana_pool?.set_intrinsic_recharge(MANA_ALL_LEYLINES)
 	neck = /obj/item/clothing/neck/talkstone
 	cloak = /obj/item/clothing/cloak/black_cloak
-	armor = /obj/item/clothing/shirt/robe/black
-	pants = /obj/item/clothing/pants/tights/random
+	armor = /obj/item/clothing/shirt/robe/colored/black
+	pants = /obj/item/clothing/pants/tights/colored/random
 	shoes = /obj/item/clothing/shoes/shortboots
 	belt = /obj/item/storage/belt/leather/plaquesilver
 	beltl = /obj/item/flashlight/flare/torch/lantern
@@ -290,6 +295,7 @@
 	outfit = /datum/outfit/job/heartfelt/prior
 	allowed_races = RACES_PLAYER_NONDISCRIMINATED
 	grant_lit_torch = TRUE
+	is_recognized = TRUE
 
 /datum/outfit/job/heartfelt/prior
 	allowed_patrons = list(/datum/patron/divine/astrata)
@@ -299,7 +305,7 @@
 	H.virginity = TRUE
 	neck = /obj/item/clothing/neck/psycross/silver
 	shirt = /obj/item/clothing/shirt/undershirt/priest
-	pants = /obj/item/clothing/pants/tights/black
+	pants = /obj/item/clothing/pants/tights/colored/black
 	shoes = /obj/item/clothing/shoes/shortboots
 	belt = /obj/item/storage/belt/leather/rope
 	beltl = /obj/item/flashlight/flare/torch/lantern
@@ -326,9 +332,11 @@
 		H.change_stat(STATKEY_CON, -1)
 		H.change_stat(STATKEY_END, 1)
 		H.change_stat(STATKEY_SPD, -1)
-	var/datum/devotion/cleric_holder/C = new /datum/devotion/cleric_holder(H, H.patron)
-	C.grant_spells_priest(H)
-	H.verbs += list(/mob/living/carbon/human/proc/devotionreport, /mob/living/carbon/human/proc/clericpray)
+	var/holder = H.patron?.devotion_holder
+	if(holder)
+		var/datum/devotion/devotion = new holder()
+		devotion.make_priest()
+		devotion.grant_to(H)
 	H.cmode_music = 'sound/music/cmode/church/CombatInquisitor.ogg'
 
 /datum/migrant_role/heartfelt/artificer
@@ -337,6 +345,7 @@
 	outfit = /datum/outfit/job/heartfelt/artificer
 	allowed_races = RACES_PLAYER_NONDISCRIMINATED
 	grant_lit_torch = TRUE
+	is_recognized = TRUE
 
 /datum/outfit/job/heartfelt/artificer/pre_equip(mob/living/carbon/human/H)
 	..()

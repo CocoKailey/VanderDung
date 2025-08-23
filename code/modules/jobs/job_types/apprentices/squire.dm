@@ -5,7 +5,6 @@
 	The Captain took notice of your potential, and recruited you as a personal ward. \
 	\n\n\
 	Learn from the garrison and train hard... maybe one dae you will be honored with knighthood."
-	flag = SQUIRE
 	department_flag = APPRENTICES
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	faction = FACTION_TOWN
@@ -26,7 +25,7 @@
 
 
 /datum/outfit/job/squire
-	shirt = /obj/item/clothing/shirt/undershirt/guard
+	shirt = /obj/item/clothing/shirt/undershirt/colored/guard
 	pants = /obj/item/clothing/pants/chainlegs/iron
 	shoes = /obj/item/clothing/shoes/boots
 	belt = /obj/item/storage/belt/leather

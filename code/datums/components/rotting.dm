@@ -1,5 +1,6 @@
 /datum/component/rot
 	var/amount = 0
+	var/rot_amount_per_process = 10 //1 second
 	var/last_process = 0
 	var/datum/looping_sound/fliesloop/soundloop
 
@@ -21,7 +22,7 @@
 	return ..()
 
 /datum/component/rot/process()
-	var/amt2add = 10 //1 second
+	var/amt2add = rot_amount_per_process
 	if(last_process)
 		amt2add = ((world.time - last_process)/10) * amt2add
 	last_process = world.time
@@ -102,6 +103,9 @@
 				soundloop.start()
 		C.update_body()
 
+/datum/component/rot/simple
+	rot_amount_per_process = 5
+
 /datum/component/rot/simple/process()
 	..()
 	var/mob/living/L = parent
@@ -133,7 +137,7 @@
 	if(istype(T))
 		if(iscarbon(L))
 			var/mob/living/carbon/stinky = L
-			for(clean_moodlets in stinky.positive_stressors)
+			for(clean_moodlets in stinky.get_positive_stressors())
 				return
 		T.pollute_turf(/datum/pollutant/rot, 0.25)
 

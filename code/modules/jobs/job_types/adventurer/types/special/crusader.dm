@@ -11,6 +11,7 @@
 	maximum_possible_slots = 1
 	pickprob = 30
 	min_pq = 0
+	is_recognized = TRUE
 
 /datum/outfit/job/adventurer/crusader
 	allowed_patrons = list(/datum/patron/divine/astrata, /datum/patron/divine/necra, /datum/patron/psydon)
@@ -23,7 +24,7 @@
 	armor = /obj/item/clothing/armor/chainmail/hauberk
 	cloak = /obj/item/clothing/cloak/cape/crusader
 	gloves = /obj/item/clothing/gloves/chain
-	shirt = /obj/item/clothing/shirt/tunic/random
+	shirt = /obj/item/clothing/shirt/tunic/colored/random
 	pants = /obj/item/clothing/pants/chainlegs
 	shoes = /obj/item/clothing/shoes/boots/armor/light
 	backr = /obj/item/weapon/shield/tower/metal

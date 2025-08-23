@@ -3,7 +3,6 @@
 	f_title = "Innkeepers Daughter"
 	tutorial = "One nite the Innkeeper took you in during a harsh winter, \
 	you've been thankful ever since." //rewrite probably?
-	flag = INNKEEPCHILD
 	department_flag = YOUNGFOLK
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	display_order = JDO_INNKEEP_CHILD
@@ -37,8 +36,8 @@
 		H.change_stat(STATKEY_END, 1)
 		H.change_stat(STATKEY_STR, -1)
 		H.change_stat(STATKEY_CON, -1)
-	pants = /obj/item/clothing/pants/tights/random
-	shirt = /obj/item/clothing/shirt/shortshirt/random
+	pants = /obj/item/clothing/pants/tights/colored/random
+	shirt = /obj/item/clothing/shirt/shortshirt/colored/random
 	shoes = /obj/item/clothing/shoes/shortboots
 	belt = /obj/item/storage/belt/leather
 	beltl = /obj/item/storage/belt/pouch/coins/poor

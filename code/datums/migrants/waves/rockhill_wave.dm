@@ -5,7 +5,7 @@
 	allowed_sexes = list(MALE,FEMALE)
 	allowed_races = RACES_PLAYER_NONDISCRIMINATED
 	grant_lit_torch = TRUE
-	is_foreigner = FALSE
+	is_recognized = TRUE
 /datum/outfit/job/rockhill/mayor/pre_equip(mob/living/carbon/human/H)
 	..()
 	shirt = /obj/item/clothing/shirt/undershirt
@@ -13,7 +13,7 @@
 	neck = /obj/item/clothing/neck/gorget
 	head = /obj/item/clothing/head/helmet
 	shoes = /obj/item/clothing/shoes/nobleboot
-	pants = /obj/item/clothing/pants/tights/black
+	pants = /obj/item/clothing/pants/tights/colored/black
 	cloak = /obj/item/clothing/cloak/raincloak/furcloak
 	armor = /obj/item/clothing/armor/cuirass
 	beltr = /obj/item/storage/belt/pouch/coins/rich
@@ -64,6 +64,7 @@
 	allowed_races = RACES_PLAYER_NONDISCRIMINATED
 	grant_lit_torch = TRUE
 	advjob_examine = FALSE
+	is_recognized = TRUE
 /datum/outfit/job/rockhill/knight/pre_equip(mob/living/carbon/human/H)
 	..()
 	head = /obj/item/clothing/head/helmet
@@ -140,7 +141,7 @@
 	head = /obj/item/clothing/head/helmet/leather
 	pants = /obj/item/clothing/pants/trou/leather
 	cloak = /obj/item/clothing/cloak/half/vet
-	shirt = /obj/item/clothing/shirt/undershirt/guardsecond
+	shirt = /obj/item/clothing/shirt/undershirt/colored/guardsecond
 	armor = /obj/item/clothing/armor/medium/scale
 	neck = /obj/item/clothing/neck/gorget
 	shoes = /obj/item/clothing/shoes/boots

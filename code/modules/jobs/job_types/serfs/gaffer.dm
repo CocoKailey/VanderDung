@@ -1,6 +1,5 @@
 /datum/job/gaffer
 	title = "Gaffer"
-	flag = GAFFER
 	department_flag = SERFS
 	faction = "Station"
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE )
@@ -38,7 +37,7 @@
 	belt = /obj/item/storage/belt/leather/plaquegold
 	beltl = /obj/item/storage/keyring/gaffer
 	beltr = /obj/item/flashlight/flare/torch/lantern
-	shirt = /obj/item/clothing/shirt/tunic/black
+	shirt = /obj/item/clothing/shirt/tunic/colored/black
 	wrists = /obj/item/clothing/wrists/bracers/leather/advanced
 	armor = /obj/item/clothing/armor/leather/hide
 	if(!visualsOnly)
@@ -47,7 +46,7 @@
 		ring = /obj/item/clothing/ring/gold
 	pants = /obj/item/clothing/pants/trou/leather/advanced
 	shoes = /obj/item/clothing/shoes/nobleboot
-	cloak = /obj/item/clothing/cloak/raincloak/furcloak/black
+	cloak = /obj/item/clothing/cloak/raincloak/furcloak/colored/black
 	mask = /obj/item/clothing/face/eyepatch/fake
 
 	ADD_TRAIT(H, TRAIT_SEEPRICES, type)

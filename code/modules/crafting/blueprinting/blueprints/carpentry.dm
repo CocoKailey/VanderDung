@@ -23,6 +23,7 @@
 	required_materials = list(/obj/item/grown/log/tree/small = 2)
 	supports_directions = TRUE
 	craftdiff = 0
+	build_time = 4 SECONDS
 
 /datum/blueprint_recipe/carpentry/swing_door
 	name = "swing door"
@@ -42,6 +43,7 @@
 	)
 	supports_directions = TRUE
 	craftdiff = 1
+	build_time = 4 SECONDS
 
 /datum/blueprint_recipe/carpentry/viewport_door
 	name = "wooden door (viewport)"
@@ -53,6 +55,7 @@
 	)
 	supports_directions = TRUE
 	craftdiff = 2
+	build_time = 4 SECONDS
 
 /datum/blueprint_recipe/carpentry/fancy_door
 	name = "fancy wooden door"
@@ -61,6 +64,7 @@
 	required_materials = list(/obj/item/grown/log/tree/small = 2)
 	supports_directions = TRUE
 	craftdiff = 3
+	build_time = 4 SECONDS
 
 /datum/blueprint_recipe/carpentry/bin
 	name = "wooden bin"
@@ -138,7 +142,7 @@
 	)
 	craftdiff = 1
 
-/datum/blueprint_recipe/carpentry/wooden_stairs
+/datum/blueprint_recipe/carpentry/wooden_stairs_down
 	name = "wooden stairs (down)"
 	desc = "Wooden stairs leading downward."
 	result_type = /obj/structure/stairs/d
@@ -148,6 +152,14 @@
 	)
 	supports_directions = TRUE
 	craftdiff = 1
+
+/datum/blueprint_recipe/carpentry/wooden_stairs_down/check_craft_requirements(mob/user, turf/T, obj/structure/blueprint/blueprint)
+	var/turf/partner = get_step_multiz(get_turf(blueprint), DOWN)
+	partner = get_step(partner, turn(blueprint.blueprint_dir, 180))
+	if(!isopenturf(partner))
+		to_chat(user, span_warning("Need an openspace at the turf below!"))
+		return FALSE
+	. = ..()
 
 /datum/blueprint_recipe/carpentry/railing
 	name = "railing"
@@ -357,9 +369,8 @@
 	desc = "A restraining device for punishment."
 	result_type = /obj/structure/pillory
 	required_materials = list(
-		/obj/item/grown/log/tree/small = 1,
+		/obj/item/grown/log/tree/small = 2,
 		/obj/item/ingot/iron = 1,
-		/obj/item/customlock/finished = 1
 	)
 	supports_directions = TRUE
 	craftdiff = 2
@@ -407,7 +418,6 @@
 	result_type = /obj/structure/composter
 	required_materials = list(/obj/item/grown/log/tree/small = 1)
 	craftdiff = 0
-	build_time = 2 SECONDS
 
 /datum/blueprint_recipe/carpentry/structure/plough
 	name = "plough"
@@ -438,3 +448,14 @@
 	)
 	craftdiff = 1
 	requires_ceiling = TRUE
+
+/datum/blueprint_recipe/carpentry/apiary
+	name = "Apiary"
+	desc = "A home for bees."
+	result_type = /obj/structure/apiary
+	required_materials = list(
+		/obj/item/grown/log/tree/small = 2,
+		/obj/item/natural/wood/plank = 2,
+		/obj/item/natural/fibers = 2
+	)
+	craftdiff = 1

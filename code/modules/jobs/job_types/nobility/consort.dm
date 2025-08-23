@@ -3,7 +3,6 @@
 	tutorial = "Yours was a marriage of political convenience rather than love, \
 	yet you have remained the ruling monarch's good friend and confidant throughout your marriage. \
 	But your love and loyalty will be tested, for daggers are equally pointed at your throat."
-	flag = CONSORT
 	department_flag = NOBLEMEN
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	display_order = JDO_CONSORT
@@ -59,11 +58,11 @@
 /datum/outfit/job/consort/highborn/pre_equip(mob/living/carbon/human/H)
 	. = ..()
 	if(H.gender == MALE)
-		pants = /obj/item/clothing/pants/tights/black
-		shirt = /obj/item/clothing/shirt/undershirt/black
+		pants = /obj/item/clothing/pants/tights/colored/black
+		shirt = /obj/item/clothing/shirt/undershirt/colored/black
 		armor = /obj/item/clothing/armor/leather/vest/winterjacket
 	else
-		pants = /obj/item/clothing/pants/tights/random
+		pants = /obj/item/clothing/pants/tights/colored/random
 		armor = /obj/item/clothing/armor/leather/vest/winterjacket
 		shirt = /obj/item/clothing/armor/gambeson/heavy/winterdress
 
@@ -103,11 +102,11 @@
 /datum/outfit/job/consort/courtesan/pre_equip(mob/living/carbon/human/H)
 	. = ..()
 	if(H.gender == MALE)
-		pants = /obj/item/clothing/pants/tights/black
-		shirt = /obj/item/clothing/shirt/undershirt/black
+		pants = /obj/item/clothing/pants/tights/colored/black
+		shirt = /obj/item/clothing/shirt/undershirt/colored/black
 		armor = /obj/item/clothing/armor/leather/vest/winterjacket // this is kind of stupid but i love it anyway
 	else
-		pants = /obj/item/clothing/pants/tights/random
+		pants = /obj/item/clothing/pants/tights/colored/random
 		shirt = /obj/item/clothing/armor/gambeson/heavy/winterdress
 		armor = /obj/item/clothing/armor/leather/vest/winterjacket
 		cloak = /obj/item/clothing/cloak/raincloak/furcloak
@@ -147,11 +146,11 @@
 /datum/outfit/job/consort/lowborn/pre_equip(mob/living/carbon/human/H)
 	. = ..()
 	if(H.gender == MALE)
-		pants = /obj/item/clothing/pants/tights/green
-		shirt = /obj/item/clothing/shirt/undershirt/black
-		armor = /obj/item/clothing/shirt/tunic/green
+		pants = /obj/item/clothing/pants/tights/colored/green
+		shirt = /obj/item/clothing/shirt/undershirt/colored/black
+		armor = /obj/item/clothing/shirt/tunic/colored/green
 	else
-		shirt = /obj/item/clothing/shirt/dress/silkdress/princess
+		shirt = /obj/item/clothing/shirt/dress/silkdress/colored/princess
 		armor = /obj/item/clothing/armor/leather/jacket/silk_coat
 
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
@@ -189,7 +188,6 @@
 
 /datum/job/exlady //just used to change the consort title
 	title = "Ex-Consort"
-	flag = CONSORT
 	department_flag = NOBLEMEN
 	faction = FACTION_TOWN
 	total_positions = 0

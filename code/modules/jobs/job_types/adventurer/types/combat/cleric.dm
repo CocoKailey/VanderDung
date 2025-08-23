@@ -2,28 +2,19 @@
 /datum/advclass/combat/cleric
 	name = "Cleric"
 	tutorial = "Clerics are wandering warriors of the Gods, drawn from the ranks of temple acolytes who demonstrated martial talent. Protected by armor and zeal, they are a force to be reckoned with."
-	allowed_races = RACES_PLAYER_ALL
+	allowed_races = RACES_PLAYER_NONHERETICAL
 	vampcompat = FALSE
 	outfit = /datum/outfit/job/adventurer/cleric
 	category_tags = list(CTAG_ADVENTURER)
 	min_pq = 0
 	maximum_possible_slots = 4
+	allowed_patrons = ALL_CLERIC_PATRONS
 
 /datum/outfit/job/adventurer/cleric
 	allowed_patrons = ALL_CLERIC_PATRONS
 
 /datum/outfit/job/adventurer/cleric/pre_equip(mob/living/carbon/human/H)
 	..()
-	if(H.dna && (H.dna.species.id in RACES_PLAYER_HERETICAL_RACE) && !istype(H.patron, /datum/patron/inhumen))
-		var/list/inhumen = list(
-			/datum/patron/inhumen/graggar,
-			/datum/patron/inhumen/zizo,
-			/datum/patron/inhumen/matthios,
-			/datum/patron/inhumen/baotha
-		)
-		var/picked = pick(inhumen)
-		H.set_patron(picked)
-		to_chat(H, span_warning("My patron had not endorsed my practices in my younger years. I've since grown acustomed to [H.patron]."))
 	H.virginity = TRUE
 	head = /obj/item/clothing/head/helmet/ironpot
 	armor = /obj/item/clothing/armor/cuirass/iron // Adventurers are not supposed to have fricking steel, at all
@@ -85,29 +76,8 @@
 			H.cmode_music = 'sound/music/cmode/adventurer/CombatOutlander2.ogg'
 		if(/datum/patron/divine/xylix)
 			wrists = /obj/item/clothing/neck/psycross/silver/xylix
-			cloak = /obj/item/clothing/cloak/tabard/crusader
+			cloak = /obj/item/clothing/cloak/stabard/templar/xylix
 			H.cmode_music = 'sound/music/cmode/adventurer/CombatMonk.ogg'
-		if(/datum/patron/inhumen/graggar) // Heretical Patrons
-			cloak = /obj/item/clothing/cloak/raincloak/mortus
-			H.cmode_music = 'sound/music/cmode/antag/combat_werewolf.ogg'
-			GLOB.heretical_players += H.real_name
-		if(/datum/patron/inhumen/graggar_zizo)
-			cloak = /obj/item/clothing/cloak/raincloak/mortus
-			H.cmode_music = 'sound/music/cmode/antag/combat_werewolf.ogg'
-		if(/datum/patron/inhumen/zizo)
-			cloak = /obj/item/clothing/cloak/raincloak/mortus
-			H.cmode_music = 'sound/music/cmode/antag/combat_cult.ogg'
-			GLOB.heretical_players += H.real_name
-		if(/datum/patron/inhumen/matthios)
-			cloak = /obj/item/clothing/cloak/raincloak/mortus
-			H.cmode_music = 'sound/music/cmode/antag/CombatBandit1.ogg'
-			GLOB.heretical_players += H.real_name
-		if(/datum/patron/inhumen/baotha)
-			head = /obj/item/clothing/head/crown/circlet
-			mask = /obj/item/clothing/face/spectacles/sglasses
-			cloak = /obj/item/clothing/cloak/raincloak/purple
-			H.cmode_music = 'sound/music/cmode/antag/CombatBaotha.ogg'
-			GLOB.heretical_players += H.real_name
 		else // Failsafe
 			cloak = /obj/item/clothing/cloak/tabard/crusader // Give us a generic crusade tabard
 			wrists = /obj/item/clothing/neck/psycross/silver // Give us a silver psycross for protection against lickers
@@ -144,7 +114,8 @@
 			H.grant_language(/datum/language/celestial)
 			to_chat(H, "<span class='info'>I can speak Celestial with ,c before my speech.</span>")
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC) // Even if it has limited slots, it is a common drifter role available to anyone. Their armor also is not heavy, so medium armor training is enough
-	var/datum/devotion/cleric_holder/C = new /datum/devotion/cleric_holder(H, H.patron)
-	C.grant_spells_cleric(H)
-	H.verbs += list(/mob/living/carbon/human/proc/devotionreport, /mob/living/carbon/human/proc/clericpray)
-
+	var/holder = H.patron?.devotion_holder
+	if(holder)
+		var/datum/devotion/devotion = new holder()
+		devotion.make_cleric()
+		devotion.grant_to(H)

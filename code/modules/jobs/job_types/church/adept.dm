@@ -4,7 +4,6 @@
 	Your master, the Inquisitor, saved you from the gallows \
 	and has given you true purpose in service to Psydon. \
 	You will not let him down."
-	flag = MONK
 	department_flag = CHURCHMEN
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	display_order = JDO_SHEPHERD
@@ -32,7 +31,7 @@
 	beltr = /obj/item/storage/belt/pouch/coins/poor
 	mask = /obj/item/clothing/face/facemask/silver
 	pants = /obj/item/clothing/pants/trou/leather
-	shirt = /obj/item/clothing/armor/gambeson/light/black
+	shirt = /obj/item/clothing/armor/gambeson/light/colored/black
 	wrists = /obj/item/clothing/neck/psycross/silver
 
 // Brutal Zealot, a class balanced to town guard, with 1 more strength but less intelligence and perception. Axe/Mace and shield focus.
@@ -102,7 +101,7 @@
 	backl = /obj/item/ammo_holder/quiver/arrows
 	beltl = /obj/item/weapon/mace/cudgel
 	pants = /obj/item/clothing/pants/trou/leather
-	cloak = /obj/item/clothing/cloak/raincloak/brown
+	cloak = /obj/item/clothing/cloak/raincloak/colored/brown
 	backpack_contents = list(/obj/item/lockpick = 1, /obj/item/storage/keyring/inquisitor = 1, /obj/item/weapon/knife/dagger/psydon = 1)
 
 	//Stats for class
@@ -191,7 +190,7 @@
 			return
 		var/datum/antagonist/new_antag = new /datum/antagonist/purishep()
 		H.mind.add_antag_datum(new_antag)
-		H.set_patron(/datum/patron/psydon)
+		H.set_patron(/datum/patron/psydon, TRUE)
 		H.verbs |= /mob/living/carbon/human/proc/torture_victim
 		H.verbs |= /mob/living/carbon/human/proc/faith_test
 		if(!H.has_language(/datum/language/oldpsydonic))

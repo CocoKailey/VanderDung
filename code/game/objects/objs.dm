@@ -69,8 +69,8 @@
 	/// This is depreciated but I don't want to replace it yet
 	var/lockid
 
-	var/lock_sound = 'sound/foley/lock.ogg'
-	var/unlock_sound = 'sound/foley/unlock.ogg'
+	var/lock_sound = 'sound/foley/doors/woodlock.ogg'
+	var/unlock_sound = 'sound/foley/doors/woodlock.ogg'
 	/// Sound we play when a key fails to unlock
 	var/rattle_sound = 'sound/foley/lockrattle.ogg'
 	/// If this is currently being lockpicked
@@ -78,6 +78,9 @@
 
 	/// Uses colours defined by the monarch roundstart see [lordcolor.dm]
 	var/uses_lord_coloring = FALSE
+
+	///this is a whole number converted into a multiplier
+	var/rarity_mod = 0
 
 	vis_flags = VIS_INHERIT_PLANE
 

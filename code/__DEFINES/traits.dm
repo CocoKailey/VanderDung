@@ -172,7 +172,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_ZOMBIE_IMMUNE "zombie_immune" //immune to zombie infection
 #define TRAIT_NO_BITE "no_bite" //prevents biting
 #define TRAIT_HARDDISMEMBER		"hard_dismember"
-#define TRAIT_FOREIGNER "foreigner" // is this guy a foreigner?
+#define TRAIT_FOREIGNER "Foreigner" // is this guy a foreigner?
 #define TRAIT_NOAMBUSH "no_ambush" //! mob cannot be ambushed for any reason
 #define TRAIT_CLAN_LEADER "clan_leader"
 #define TRAIT_BLUEPRINT_VISION "blueprint_vision"
@@ -291,6 +291,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define ADVENTURER_TRAIT "adventurer"
 #define TRAIT_LONGSTRIDER "longstrider"
 #define TRAIT_GUIDANCE "guidance"
+#define DEVOTION_TRAIT "devotion_trait"
 
 #define TRAIT_WEBWALK 					"Webwalker"
 #define TRAIT_NOSTINK 					"Dead Nose"
@@ -353,9 +354,11 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_MOONWATER_ELIXIR			"Moonwater Elixir"
 #define TRAIT_FLOWERFIELD_IMMUNITY		"Flower Strider"
 #define TRAIT_SECRET_OFFICIANT			"Secret Officiant"
+#define TRAIT_NOENERGY 					"Boundless Energy" //Specifically, You don't lose fatigue, but you do continue losing stamina.
 /// applied to orphans
 #define TRAIT_ORPHAN 					"Orphan"
 #define TRAIT_RECRUITED					"Recruit" //Trait used to give foreigners their new title
+#define TRAIT_RECOGNIZED				"Recognized" // Given to famous migrants, pilgrims and adventurers, enable their title.
 
 // Divine patron trait bonuses:
 #define TRAIT_SOUL_EXAMINE				"Blessing of Necra"  //can check bodies to see if they have departed
@@ -511,5 +514,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_WIELDED "wielded"
 /// The items needs two hands to be carried
 #define TRAIT_NEEDS_TWO_HANDS "needstwohands"
+/// This item can't be pickpocketed
+#define TRAIT_HARD_TO_STEAL "hard_to_steal"
 /// Trait given by echolocation component.
 #define ECHOLOCATION_TRAIT "echolocation"

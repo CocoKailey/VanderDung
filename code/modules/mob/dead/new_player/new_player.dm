@@ -15,6 +15,8 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/Lore_Primer.txt"))
 	/// Used to make sure someone doesn't get spammed with messages if they're ineligible for roles
 	var/ineligible_for_roles = FALSE
 
+	hud_type = /datum/hud/new_player
+
 /mob/dead/new_player/Initialize()
 	if(length(GLOB.newplayer_start))
 		forceMove(pick(GLOB.newplayer_start))
@@ -50,9 +52,6 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/Lore_Primer.txt"))
 		sleep(0.5 SECONDS)
 		new_player_panel()
 		return
-	if(client)
-		if(client.prefs)
-			client.prefs.ShowChoices(src, 4)
 
 /mob/dead/new_player/Topic(href, href_list[])
 	if(src != usr)
@@ -173,18 +172,6 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/Lore_Primer.txt"))
 	if(href_list["votepollref"])
 		var/datum/poll_question/poll = locate(href_list["votepollref"]) in GLOB.polls
 		vote_on_poll_handler(poll, href_list)
-
-
-
-/mob/dead/new_player/verb/do_rp_prompt()
-	set name = "Lore Primer"
-	set category = "OOC"
-	var/list/dat = list()
-	dat += GLOB.roleplay_readme
-	if(dat)
-		var/datum/browser/popup = new(src, "Primer", "VANDERLIN", 650, 900)
-		popup.set_content(dat.Join())
-		popup.open()
 
 //When you cop out of the round (NB: this HAS A SLEEP FOR PLAYER INPUT IN IT)
 /mob/dead/new_player/proc/make_me_an_observer()

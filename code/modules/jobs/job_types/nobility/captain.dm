@@ -3,7 +3,6 @@
 	tutorial = "Law and Order, your divine reason for existence. \
 	You have been given command over the garrison to help keep order and peace within the city, \
 	and defend it against the many dangers of the peninsula."
-	flag = CAPTAIN
 	department_flag = NOBLEMEN
 	display_order = JDO_CAPTAIN
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
@@ -42,7 +41,7 @@
 	pants = /obj/item/clothing/pants/platelegs/captain
 	armor = /obj/item/clothing/armor/captain
 	neck = /obj/item/clothing/neck/gorget
-	shirt = /obj/item/clothing/shirt/undershirt/guard
+	shirt = /obj/item/clothing/shirt/undershirt/colored/guard
 	shoes = /obj/item/clothing/shoes/boots
 	backl = /obj/item/storage/backpack/satchel
 	backr = /obj/item/weapon/shield/tower/metal
@@ -50,7 +49,7 @@
 	beltl = /obj/item/weapon/sword/sabre/dec
 	beltr = /obj/item/weapon/mace/cudgel
 	cloak = /obj/item/clothing/cloak/captain
-	scabbards = list(/obj/item/weapon/scabbard/sword)
+	scabbards = list(/obj/item/weapon/scabbard/sword/noble)
 	backpack_contents = list(/obj/item/storage/keyring/captain = 1, /obj/item/signal_horn = 1)
 	H.adjust_skillrank(/datum/skill/combat/swords, 5, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)

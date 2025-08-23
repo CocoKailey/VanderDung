@@ -33,6 +33,8 @@ GLOBAL_PROTECT(admin_verbs_default)
 	/client/proc/check_antagonists,
 	/client/proc/admin_force_next_migrant_wave,
 	/client/proc/cmd_admin_say,
+	/client/proc/cmd_view_job_boosts,
+	/client/proc/cmd_give_job_boost,
 	/client/proc/deadmin,				/*destroys our own admin datum so we can play as a regular player*/
 	/client/proc/toggle_context_menu,
 	/client/proc/manage_books,
@@ -193,6 +195,7 @@ GLOBAL_PROTECT(admin_verbs_debug)
 	/client/proc/cmd_display_del_log,
 	/client/proc/outfit_manager,
 	/client/proc/debug_huds,
+	/client/proc/map_export,
 	/client/proc/map_template_load,
 	/client/proc/map_template_upload,
 	/client/proc/jump_to_ruin,

@@ -6,7 +6,6 @@
 	You now live in this kingdom - a quiet peaceful place \
 	compared to the Asylum you once warded, \
 	having once kept bloodthirsty churls locked in the dark."
-	flag = JAILOR
 	department_flag = GARRISON
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	display_order = JDO_JAILOR
@@ -27,11 +26,11 @@
 
 /datum/outfit/job/jailor/pre_equip(mob/living/carbon/human/H)
 	..()
-	head = /obj/item/clothing/head/roguehood/black
+	head = /obj/item/clothing/head/roguehood/colored/black
 	neck = /obj/item/clothing/neck/coif
 	armor = /obj/item/clothing/armor/leather/splint
-	shirt = /obj/item/clothing/shirt/tunic/black
-	pants = /obj/item/clothing/pants/loincloth/black
+	shirt = /obj/item/clothing/shirt/tunic/colored/black
+	pants = /obj/item/clothing/pants/loincloth/colored/black
 	shoes = /obj/item/clothing/shoes/shortboots
 	wrists = /obj/item/rope/chain
 	belt = /obj/item/storage/belt/leather

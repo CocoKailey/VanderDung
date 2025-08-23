@@ -94,6 +94,20 @@
 	. = ..()
 	enchant(/datum/enchantment/silver)
 
+//................ Psydon Whip ............... //
+/obj/item/weapon/whip/psydon
+	force = DAMAGE_WHIP+2
+	name = "psydonian whip"
+	desc = "A whip fashioned with the iconography of Psydon, and crafted entirely out of silver."
+	icon_state = "psywhip"
+	resistance_flags = FIRE_PROOF
+	smeltresult = /obj/item/ingot/silver
+	last_used = 0
+
+/obj/item/weapon/whip/psydon/Initialize(mapload)
+	. = ..()
+	enchant(/datum/enchantment/silver)
+
 //................ Caning Stick.................//
 /obj/item/weapon/whip/cane
 	name = "caning stick"
@@ -135,13 +149,6 @@
 				)
 			if("onbelt")
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
-
-/obj/item/weapon/whip/cane/physician
-	name = "physician's cane"
-	desc = "A prized cane. Embellished with a golden serpent, representing the Kingsfield university."
-	icon_state = "fancy_cane"
-	max_integrity = 100
-	sellprice = 30
 
 /datum/intent/whip/lash/cane
 	attack_verb = list("lashes", "canes")
@@ -192,3 +199,11 @@
 	force = DAMAGE_WHIP+4
 	desc = "The chimes of this whip are said to sound as the trickster's laughter itself."
 	icon_state = "xylixwhip"
+
+/obj/item/weapon/whip/nagaika
+	name = "nagaika whip"
+	desc = "A short but heavy leather whip, sporting a blunt reinforced tip and a longer handle."
+	icon_state = "nagaika"
+	force = 25		//Same as a cudgel/sword for intent purposes. Basically a 2 range cudgel while one-handing.
+	possible_item_intents = list(/datum/intent/whip/crack/metal, /datum/intent/whip/lash, /datum/intent/sword/strike)
+	wdefense = 1	//Akin to a cudgel, still terrible at parrying though. Better than nothing I guess; thing is used irl as a counter-weapon to knives.

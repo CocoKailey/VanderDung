@@ -4,7 +4,6 @@
 	Now the days of adventure are gone, replaced by dusty tomes and whispered prophecies. The ruler's coin funds your studies,\
 	but debts both magical and mortal are never so easily repaid. With age comes wisdom, but also the creeping dread that your greatest spell work\
 	may already be behind you."
-	flag = WIZARD
 	department_flag = NOBLEMEN
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	display_order = JDO_MAGICIAN
@@ -45,7 +44,7 @@
 	..()
 	head = /obj/item/clothing/head/wizhat
 	backr = /obj/item/storage/backpack/satchel
-	armor = /obj/item/clothing/shirt/robe/black
+	armor = /obj/item/clothing/shirt/robe/colored/black
 	cloak = /obj/item/clothing/cloak/black_cloak
 	ring = /obj/item/clothing/ring/gold
 	belt = /obj/item/storage/belt/leather/plaquesilver
@@ -64,14 +63,14 @@
 	H.adjust_skillrank(/datum/skill/craft/alchemy, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/labor/mathematics, 4, TRUE)
 	if(H.age == AGE_OLD)
-		armor = /obj/item/clothing/shirt/robe/courtmage
+		armor = /obj/item/clothing/shirt/robe/colored/courtmage
 		H.change_stat(STATKEY_SPD, -1)
 		H.change_stat(STATKEY_INT, 1)
 		if(H.dna.species.id == SPEC_ID_HUMEN)
 			belt = /obj/item/storage/belt/leather/plaquegold
 			cloak = null
 			if(H.gender == FEMALE)
-				armor = /obj/item/clothing/shirt/robe/courtmage
+				armor = /obj/item/clothing/shirt/robe/colored/courtmage
 			if(H.gender == MALE)
 				armor = /obj/item/clothing/shirt/robe/wizard
 				H.dna.species.soundpack_m = new /datum/voicepack/male/wizard()

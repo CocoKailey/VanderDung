@@ -28,3 +28,31 @@
 	cost = 240
 	contains = /obj/item/clothing/ring/active/nomag
 
+/datum/supply_pack/jewelry/mercator
+	name = "Mercator Eye"
+	cost = 200
+	contains = /obj/item/clothing/neck/mercator
+
+/datum/supply_pack/jewelry/psycross // PSYDON LIVESSS RAHHHHHH
+	name = "Silver Psycross"
+	cost = 150
+	contains = /obj/item/clothing/neck/psycross/silver
+
+/datum/supply_pack/jewelry/bglasses
+	name = "Onyx Glasses"
+	cost = 150
+	contains = /obj/item/clothing/face/spectacles/sglasses
+
+/datum/supply_pack/jewelry/gmask
+	name = "Golden Halfmask"
+	cost = 100
+	contains = /obj/item/clothing/face/lordmask
+
+/datum/supply_pack/jewelry/scom
+	name = "SCOM ring"
+	cost = 200
+	contains = /obj/item/scomstone
+
+
+
+

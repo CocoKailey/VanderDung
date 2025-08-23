@@ -1,6 +1,5 @@
 /datum/job/skeleton/knight
 	title = "Death Knight"
-	flag = DEATHKNIGHT
 
 	outfit = /datum/outfit/job/deathknight
 	cmode_music = 'sound/music/cmode/combat_weird.ogg'
@@ -32,7 +31,7 @@
 	belt = /obj/item/storage/belt/leather
 	pants = /obj/item/clothing/pants/platelegs/blk/death
 	shoes = /obj/item/clothing/shoes/boots/armor/blkknight
-	shirt = /obj/item/clothing/shirt/undershirt/black
+	shirt = /obj/item/clothing/shirt/undershirt/colored/black
 	armor = /obj/item/clothing/armor/plate/blkknight/death
 	gloves = /obj/item/clothing/gloves/plate/blk/death
 	backl = /obj/item/weapon/sword/long/death

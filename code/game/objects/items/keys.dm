@@ -20,7 +20,7 @@
 	dropshrink = 0.75
 	throwforce = 0
 	max_integrity = 10
-	picklvl = 1
+	var/picklvl = 1
 	slot_flags = ITEM_SLOT_HIP|ITEM_SLOT_MOUTH|ITEM_SLOT_NECK
 	destroy_sound = 'sound/items/pickbreak.ogg'
 	grid_width = 32
@@ -150,7 +150,7 @@
 	name = "Soilson Key"
 	desc = "This key is used by the Soilsons."
 	icon_state = "rustkey"
-	lockids = list(ACCESS_FARM)
+	lockids = list(ACCESS_FARM, ACCESS_BUTCHER)
 
 /obj/item/key/merchant
 	name = "merchant's key"

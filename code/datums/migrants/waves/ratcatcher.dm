@@ -4,17 +4,18 @@
 	you live in this shitpit. Regrettably, the universe sought to make your life a divine comedy. Instead of begging for \
 	coin, the nobility sought it grand to give you a royal title - Ratcatcher. Please, for the love of Necra, just LET IT END!"
 	outfit = /datum/outfit/job/ratcatcher
+	is_recognized = TRUE
 
 /datum/outfit/job/ratcatcher/pre_equip(mob/living/carbon/human/H)
 	..()
 	r_hand = /obj/item/weapon/pitchfork
 	l_hand = /obj/item/flint
 	armor = /obj/item/clothing/armor/gambeson/light
-	shirt = /obj/item/clothing/shirt/undershirt/vagrant
+	shirt = /obj/item/clothing/shirt/undershirt/colored/vagrant
 	neck = /obj/item/clothing/neck/coif/cloth
 	head = /obj/item/clothing/head/helmet/leather
 	gloves = /obj/item/clothing/gloves/fingerless
-	pants = /obj/item/clothing/pants/tights/vagrant
+	pants = /obj/item/clothing/pants/tights/colored/vagrant
 	shoes = /obj/item/clothing/shoes/boots
 	belt = /obj/item/storage/belt/leather
 	beltr = /obj/item/flashlight/flare/torch/lantern

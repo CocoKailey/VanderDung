@@ -9,13 +9,14 @@
 	category_tags = list(CTAG_ADVENTURER)
 	min_pq = 2
 	cmode_music = 'sound/music/cmode/church/CombatInquisitor.ogg'
+	is_recognized = TRUE
 
 /datum/outfit/job/adventurer/puritan/pre_equip(mob/living/carbon/human/H)
 	..()
 	shirt = /obj/item/clothing/shirt/undershirt/puritan
 	belt = /obj/item/storage/belt/leather
 	shoes = /obj/item/clothing/shoes/boots
-	pants = /obj/item/clothing/pants/tights/black
+	pants = /obj/item/clothing/pants/tights/colored/black
 	armor = /obj/item/clothing/armor/leather/splint
 	cloak = /obj/item/clothing/cloak/cape/puritan
 	head = /obj/item/clothing/head/helmet/leather/inquisitor
