@@ -207,7 +207,7 @@
 /datum/stressevent/saw_exold_party
 	timer = 2 MINUTES
 	stressadd = 2
-	desc = span_red("Oh gods.. its <i>him.</i>")
+	desc = span_red("Oh gods.. it's <i>them.</i>")
 
 /datum/stressevent/astrata_grandeur
 	timer = 30 MINUTES
